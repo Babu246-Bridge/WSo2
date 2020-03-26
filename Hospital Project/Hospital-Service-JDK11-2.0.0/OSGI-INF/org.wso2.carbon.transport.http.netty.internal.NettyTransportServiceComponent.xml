@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.wso2.carbon.transport.http.netty.internal.NettyTransportServiceComponent" immediate="true" activate="activate">
+  <implementation class="org.wso2.carbon.transport.http.netty.internal.NettyTransportServiceComponent"/>
+  <service>
+    <provide interface="org.wso2.carbon.kernel.startupresolver.RequiredCapabilityListener"/>
+  </service>
+  <reference name="message-processor" cardinality="0..1" policy="dynamic" interface="org.wso2.carbon.messaging.CarbonMessageProcessor" bind="addMessageProcessor" unbind="removeMessageProcessor"/>
+  <reference name="messaging-handler" cardinality="0..n" policy="dynamic" interface="org.wso2.carbon.messaging.handler.MessagingHandler" bind="addNettyStatHandler" unbind="removeNettyStatHandler"/>
+  <reference name="transport-listener-manager" cardinality="0..1" policy="dynamic" interface="org.wso2.carbon.messaging.TransportListenerManager" bind="addManager" unbind="removeManager"/>
+  <property name="componentName" type="String" value="netty-transports-mgt"/>
+</scr:component>

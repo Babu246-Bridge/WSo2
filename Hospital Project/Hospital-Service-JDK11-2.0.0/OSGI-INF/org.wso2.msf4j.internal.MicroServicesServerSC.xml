@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.wso2.msf4j.internal.MicroServicesServerSC" immediate="true" activate="start">
+  <implementation class="org.wso2.msf4j.internal.MicroservicesServerSC"/>
+  <service>
+    <provide interface="org.wso2.carbon.kernel.startupresolver.RequiredCapabilityListener"/>
+  </service>
+  <reference name="carbon-transport" cardinality="1..n" policy="dynamic" interface="org.wso2.carbon.kernel.transports.CarbonTransport" bind="addCarbonTransport" unbind="removeCarbonTransport"/>
+  <reference name="exception-mapper" cardinality="0..n" policy="dynamic" interface="javax.ws.rs.ext.ExceptionMapper" bind="addExceptionMapper" unbind="removeExceptionMapper"/>
+  <reference name="interceptor" cardinality="0..n" policy="dynamic" interface="org.wso2.msf4j.Interceptor" bind="addInterceptor" unbind="removeInterceptor"/>
+  <reference name="microservice" cardinality="0..n" policy="dynamic" interface="org.wso2.msf4j.Microservice" bind="addService" unbind="removeService"/>
+  <property name="componentName" type="String" value="wso2-microservices-server"/>
+</scr:component>

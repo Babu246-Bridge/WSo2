@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.wso2.carbon.transport.http.netty.internal.TransportServiceCapabilityProvider" immediate="true" activate="start">
+  <implementation class="org.wso2.carbon.transport.http.netty.internal.TransportServiceCapabilityProvider"/>
+  <service>
+    <provide interface="org.wso2.carbon.kernel.startupresolver.CapabilityProvider"/>
+  </service>
+  <property name="capabilityName" type="String" value="org.wso2.carbon.kernel.transports.CarbonTransport"/>
+</scr:component>

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven 3.5.3
+Built-By: lahiru
+Build-Jdk: 11.0.5
+Specification-Title: WSO2 MSF4J Microservice
+Specification-Version: 2.0.0
+Specification-Vendor: WSO2
+Implementation-Title: WSO2 MSF4J Microservice
+Implementation-Version: 2.0.0
+Implementation-Vendor-Id: org.wso2
+Implementation-Vendor: WSO2
+Implementation-URL: http://www.wso2.org/Hospital-Service/
+Main-Class: org.wso2.service.hospital.Application
+

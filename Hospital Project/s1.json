@@ -1,0 +1,23 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Using data files",
+		"_postman_id": "5d604721-fce3-a131-635c-fbbf5744a169",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/s1.json"
+	},
+  "patient":[ 
+  {
+    "name": "John Doe",
+    "dob": "1940-03-19",
+    "ssn": "234-23-525",
+    "address": "California",
+    "phone": "8770586755",
+    "email": "johndoe@gmail.com"
+  },
+  "doctor": "thomas collins",
+  "hospital": "grand oak community hospital",
+  "appointment_date": "2025-04-02"
+  ]
+}
+
